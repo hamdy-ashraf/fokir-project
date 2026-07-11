@@ -1,0 +1,39 @@
+:root {
+    --main-color: #ff305b;
+    --bg-color: #151515;
+    --second-color: #333;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 5000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Exo 2", sans-serif;
+}
+
+section {
+    background-color: var(--bg-color);
+    padding-block: 40px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
