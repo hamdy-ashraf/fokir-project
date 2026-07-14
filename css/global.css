@@ -1,5 +1,5 @@
 :root {
-    --main-color: #ff305b;
+    --main-color: rgb(255, 48, 91);
     --bg-color: #151515;
     --second-color: #333;
 }
@@ -16,7 +16,6 @@ html {
 
 body {
     font-family: "Roboto", sans-serif;
-    height: 5000px;
 }
 
 h1,
@@ -26,6 +25,12 @@ h4,
 h5,
 h6 {
     font-family: "Exo 2", sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+p {
+    color: #c1c1c1;
 }
 
 section {
@@ -36,4 +41,43 @@ section {
 .container {
     width: 80%;
     margin: auto;
+}
+
+.title {
+    margin: 50px auto;
+    text-align: center;
+    font-size: 30px;
+    width: fit-content;
+}
+
+.title .lines {
+    margin: 15px auto;
+}
+
+.title .lines span {
+    width: 50%;
+    display: block;
+    height: 1px;
+    background-color: var(--main-color);
+    margin: auto;   
+}
+
+.title .lines span:nth-of-type(2) {
+    margin-block: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--main-color);
+    transition-duration: .5s;
+}
+
+button:hover {
+    color: #fff; 
+    background-color: var(--main-color); 
 }

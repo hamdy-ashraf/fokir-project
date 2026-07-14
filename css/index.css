@@ -15,7 +15,7 @@ nav .container {
 }
 
 nav .container .logo {
-    width: 6%;
+    width: 5%;
 }
 
 nav .container .logo img {
@@ -98,7 +98,6 @@ header::before {
 }
 
 header .content {
-    color: #fff;
     position: relative;
 }
 
@@ -166,25 +165,30 @@ header a.shape::after {
 
 /* Start About Section */
 
-#About .container .part1 {
+#About .container {
+    display: flex;
+}
+
+#About .container .part {
     width: 50%;
 }
 
 #About .container .part1 .frame {
-    width: 300px; 
+    width: 320px; 
     background-color: transparent;
     position: relative;
-    border: 5px solid var(--main-color);
+    border: 4px solid var(--main-color);
     border-radius: 10px;
     margin: auto;
 }
 
 #About .container .part1 .frame .image {
     position: relative;
-    top: 15px;
-    left: 15px;
+    top: 17px;
+    left: 17px;
     border-radius: 10px;
     overflow: hidden;
+    
 }
 
 #About .container .part1 .frame .image img {
@@ -202,6 +206,7 @@ header a.shape::after {
     justify-content: center;
     align-items: center;
     transition-duration: 1s;
+    
 }
 
 #About .container .part1 .image:hover .layout {
@@ -214,7 +219,7 @@ header a.shape::after {
     column-gap: 20px;
 }
 
-#About .container .part1 .image .layout ul li  /* #About .container .part1 .image .layout ul li i     Why not */ {
+#About .container .part1 .image .layout ul li  /*#About .container .part1 .image .layout ul li i     Why not */{
     background-color: #fff;
     width: 35px;
     height: 35px;
@@ -222,5 +227,336 @@ header a.shape::after {
     display: flex;;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(-15px);
 }
 
+#About .container .part1 .image:hover .layout ul li {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+#About .container .part1 .image:hover .layout ul li:nth-of-type(2) {
+    transition-delay: 1.2s;
+}
+
+#About .container .part1 .image:hover .layout ul li:nth-of-type(3) {
+    transition-delay: 1.4s;
+}
+
+#About .container .part1 .image:hover .layout ul li:nth-of-type(4) {
+    transition-delay: 1.6s;
+}
+
+#About .container .part1 .image .layout ul li i[class*="facebook"] {
+    color: #1877F2;
+}
+
+#About .container .part1 .image .layout ul li i[class*="instagram"] {
+    color: #E4405F;
+}
+
+#About .container .part1 .image .layout ul li i[class*="twitter"] {
+    color: #1DA1F2;
+}
+
+#About .container .part1 .image .layout ul li i[class*="github"] {
+    color: #131418;
+}
+
+#About .container .part2>*:not(.buttons){
+    margin-bottom: 15px;
+}
+
+#About .container .part2 h2 {
+    font-size: 30px; 
+    font-weight: 600;
+    border-left: 4px solid var(--main-color);
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+#About .container .part2 p {
+    line-height: 1.5;
+}
+
+#About .container .part2 hr {
+    border: none;
+    border-top: 2px dotted #fff;      /* How */
+}
+
+#About .container .part2 .info {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+#About .container .part2 .info .col {
+    flex-basis: 50%;
+    display: flex;
+    column-gap: 5px;
+}
+
+#About .container .part2 .buttons {
+    display: flex;
+    column-gap: 10px;
+}
+
+/* End About Section */
+
+/* Start Services Section */
+
+#Services .container .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Services .container .content .box {
+    width: 25%;
+}
+
+#Services .container .content .box .item {
+    padding: 20px 15px;
+    text-align: center;
+    margin-inline: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    transition-duration: .5s;
+}
+
+#Services .container .content .box .item:hover {
+    box-shadow: 
+        0px 5px rgba(255, 48, 91, 0.4), 
+        0px 10px rgba(255, 48, 91, 0.3), 
+        0px 15px rgba(255, 48, 91, 0.2), 
+        0px 20px rgba(255, 48, 91, 0.1), 
+        0px 25px rgba(255, 48, 91, 0.05),
+        0px 7px 29px 0px rgb(255, 0, 0, 0.2);
+    transform: translateY(-15px);
+}
+
+#Services .container .content .box .item i {
+    font-size: 30px;
+    color: var(--main-color);
+}
+
+#Services .container .content .box .item h4 {
+    margin-block: 10px;
+}
+
+/* Start Portfolio Section */
+
+#Portfolio .container .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Portfolio .container .content .box {
+    width: 33.33%;
+}
+
+#Portfolio .container .content .box .item {
+    position: relative;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#Portfolio .container .content .box .item img {
+    width: 100%;
+    display: block;
+}
+
+#Portfolio .container .content .box .item .head::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition-duration: 1s;
+    opacity: .5;
+}
+
+#Portfolio .container .content .box .item:hover .head::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+}
+
+#Portfolio .container .content .box .item .head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#Portfolio .container .content .box .item:hover .head h3,
+#Portfolio .container .content .box .item:hover .head a {
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+#Portfolio .container .content .box .item .head h3 {
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: var(--main-color);
+    padding-block: 10px;
+}
+
+#Portfolio .container .content .box .item:hover .head h3 {
+    left: 0;
+}
+
+#Portfolio .container .content .box .item .head a {
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    color: var(--main-color);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#Portfolio .container .content .box .item:hover .head a {
+    bottom: 25px;
+}
+
+/* End Portfolio Section */
+
+/* Start Blog Section */
+
+#Blog .container .content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Blog .container .content .box {
+    width: 33.33%;
+}
+
+#Blog .container .content .box .item {
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    /* margin-inline: 30px; */
+    width: 300px;
+    margin: auto;
+    overflow: hidden;
+}
+
+#Blog .container .content .box .item .head {
+    height: 170px;
+}
+
+#Blog .container .content .box .item .head img,
+#Blog .container .content .box .item .head iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#Blog .container .content .box .item .body>*:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+#Blog .container .content .box .item .body {
+    background-color: var(--second-color);
+    padding: 15px;
+} 
+
+#Blog .container .content .box .item .body h5 {
+    font-size: 17px;
+}
+
+#Blog .container .content .box .item .body h3 {
+    font-size: 20px;
+}
+
+#Blog .container .content .box .item .body p {
+    line-height: 1.5;
+}
+
+#Blog .container .content .box .item .body button i {
+    transition-duration: .5s;
+}
+
+#Blog .container .content .box .item .body button:hover i {
+    margin-left: 3px;
+}
+
+/* End Blog Section */
+
+/* Start Contact Section */
+
+#Contact .container .content form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: auto;
+}
+
+#Contact .container .content form .data {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#Contact .container .content form .data:nth-of-type(1),
+#Contact .container .content form .data:nth-of-type(2) {
+    width: 50%;
+}
+
+#Contact .container .content form .data:nth-of-type(1) .item {
+    margin-right: 5px;
+}
+
+#Contact .container .content form .data:nth-of-type(2) .item {
+    margin-left: 5px;
+}
+
+#Contact .container .content form .data .item input,
+#Contact .container .content form .data .item textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+}
+
+#Contact .container .content form .data .item textarea {
+    resize: none;
+    height: 200px;
+}
+
+#Contact .container .content form .data .item input::placeholder,
+#Contact .container .content form .data .item textarea::placeholder {
+    color: #fff;
+}
+
+/* End Contact Section */
+
+/* Footer */
+
+footer {
+    background-color: var(--second-color);
+}
+
+footer p {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+}
