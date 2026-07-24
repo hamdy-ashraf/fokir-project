@@ -5,7 +5,7 @@ nav {
     padding-block: 5px;
     position: fixed;
     z-index: 1000;
-    width: 100%;     /* Why */
+    width: 100%;  
 }
 
 nav .container {
@@ -22,20 +22,11 @@ nav .container .logo img {
     width: 100%;
 }
 
-nav .container .links button {
-    display: none;
-}
-
 nav .container .links ul {
     display: flex;
     column-gap: 20px;
     list-style: none;
 }
-
-/* nav .links ul li {
-    color: #fff;                  Why do not Inherted
-    text-decoration: none             
-} */
 
 nav .container .links ul li a {
     color: #fff;
@@ -63,7 +54,7 @@ nav .container .links ul li a::after {
     position: absolute;
     bottom: -4px;
     left: 50%;
-    transform: translateX(-50%);    /* Why */
+    transform: translateX(-50%);
     transition-duration: .5s;
 }
 
@@ -82,10 +73,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("../fokir_images/slider-01-cd8154e4.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("../fokir_images/slider-01-cd8154e4.jpg") center/cover no-repeat;
     position: relative;
 }
 
@@ -115,15 +103,12 @@ header .content h1 {
 
 header .content p {
     font-size: 20px;
+    color: #fff;
 }
 
 header .content p::after {
     content: "Designer |";
-    animation-name: header_Paragraph_animation;
-    animation-timing-function: linear;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: header_Paragraph_animation 2s linear infinite alternate;
 }
 
 header a.shape {
@@ -138,32 +123,26 @@ header a.shape {
     overflow: hidden;
 }
 
-/* header a.shape {
-    display: flex;                         Why Not
-    justify-content: center;
-    align-items: center;
-} */
-
 header a.shape::after {
     content: "";
     background-color: var(--main-color);
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    display: block;
     position: absolute;
     top: -20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation-name: header_Anchor_animation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: header_Anchor_animation 2s linear infinite;
 }
 
 /* End Header Page */
 
 /* Start About Section */
+
+#About {
+    scroll-margin-: 40px;
+}
 
 #About .container {
     display: flex;
@@ -187,8 +166,7 @@ header a.shape::after {
     top: 17px;
     left: 17px;
     border-radius: 10px;
-    overflow: hidden;
-    
+    overflow: hidden; 
 }
 
 #About .container .part1 .frame .image img {
@@ -206,7 +184,6 @@ header a.shape::after {
     justify-content: center;
     align-items: center;
     transition-duration: 1s;
-    
 }
 
 #About .container .part1 .image:hover .layout {
@@ -219,7 +196,7 @@ header a.shape::after {
     column-gap: 20px;
 }
 
-#About .container .part1 .image .layout ul li  /*#About .container .part1 .image .layout ul li i     Why not */{
+#About .container .part1 .image .layout ul li {
     background-color: #fff;
     width: 35px;
     height: 35px;
@@ -284,7 +261,7 @@ header a.shape::after {
 
 #About .container .part2 hr {
     border: none;
-    border-top: 2px dotted #fff;      /* How */
+    border-top: 2px dotted #fff; 
 }
 
 #About .container .part2 .info {
@@ -377,7 +354,8 @@ header a.shape::after {
     background-color: var(--main-color);
     position: absolute;
     top: 50%;
-    left: 50%;transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     transition-duration: 1s;
     opacity: .5;
@@ -451,7 +429,6 @@ header a.shape::after {
 #Blog .container .content .box .item {
     border: 2px solid var(--main-color);
     border-radius: 10px;
-    /* margin-inline: 30px; */
     width: 300px;
     margin: auto;
     overflow: hidden;
@@ -473,7 +450,7 @@ header a.shape::after {
 }
 
 #Blog .container .content .box .item .body {
-    background-color: var(--second-color);
+    background-color: var(--bg-color);
     padding: 15px;
 } 
 
