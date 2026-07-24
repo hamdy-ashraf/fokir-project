@@ -141,7 +141,7 @@ header a.shape::after {
 /* Start About Section */
 
 #About {
-    scroll-margin-: 40px;
+    scroll-margin-top: 40px;
 }
 
 #About .container {
